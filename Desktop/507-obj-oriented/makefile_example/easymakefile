@@ -1,0 +1,22 @@
+# A less efficient, but much easier makefile
+
+# simply list the build commands for each file in your project after "all:clean"
+# (make sure they are all TAB indented)
+all: clean
+	javac mycode/common/Adder.java
+	javac mycode/client/Client.java
+	javac mycode/server/AdderRemote.java
+	javac mycode/server/Server.java
+
+# provide the java command to run your client program
+run-client:
+	java mycode/client/Client
+
+# provide the java command to run your server program
+run-server:
+	java mycode/server/Server
+
+# change "mycode" to your top-level package name, or 
+# write the rm commands to remove each .class file
+clean:
+	rm -rf mycode/*/*.class

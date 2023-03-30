@@ -1,0 +1,29 @@
+By default, the makefile with the name "makefile" is used by the make program.
+So, to build the project with the first makefile, simply use the command:
+
+make
+
+This will use the makefile to build the project from scratch.
+From this point you can boot up rmiregistry (in this example I'm using port 7474) and then
+run the following make command to run the server:
+
+make run-server
+
+Or, you can run this make command to run the client application:
+
+make run-client
+
+If you want to remove all of your class files, use:
+
+make clean
+
+If you want, you can also fashion your makefiles the way "easymakefile" is set up.
+It is less efficient, in that, it will rebuild the whole project from scratch every time 
+you want to build it. However, as you can see, it's much easier to write/adapt. If
+you want to test out this makefile on this example, use the -f argument to specify it
+as the makefile:
+
+make -f easymakefile
+make -f easymakefile run-server
+make -f easymakefile run-client
+make -f easymakefile clean
